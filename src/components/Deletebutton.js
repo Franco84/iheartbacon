@@ -8,6 +8,10 @@ class Deletebutton extends Component {
     this.state = { id: this.props.job.id }
   }
 
+  componentWillReceiveProps(nextProps) {
+    this.setState({ id: this.props.job.id})
+  }
+
   remove() {
     let info = this.state
     axios.delete('http://iheartbaconapi.herokuapp.com/api/v1/jobs/' + this.state.id)
