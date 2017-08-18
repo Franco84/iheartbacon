@@ -14,7 +14,7 @@ class Jobmodal extends Component {
 
   add() {
     let info = this.state
-    axios.post('http://iheartbaconapi.herokuapp.com/jobs/', {
+    axios.post('http://iheartbaconapi.herokuapp.com/api/v1/jobs', {
     info
   })
     this.setState({ ...this.state, showModal: false });

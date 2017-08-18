@@ -10,7 +10,7 @@ class Deletebutton extends Component {
 
   remove() {
     let info = this.state
-    axios.delete('http://iheartbaconapi.herokuapp.com/jobs/' + this.state.id)
+    axios.delete('http://iheartbaconapi.herokuapp.com/api/v1/jobs/' + this.state.id)
     setTimeout(() => {
       this.props.callback()
     }, 200);

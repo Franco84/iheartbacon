@@ -14,7 +14,7 @@ class Editmodal extends Component {
 
   add() {
     let info = this.state
-    axios.patch('http://iheartbaconapi.herokuapp.com/jobs/' + this.state.id, {
+    axios.patch('http://iheartbaconapi.herokuapp.com/api/v1/jobs/' + this.state.id, {
     info
   })
     this.setState({ ...this.state, showModal: false });
