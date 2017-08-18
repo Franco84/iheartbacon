@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Progress from './Progress';
 import Jobmodal from './Jobmodal';
 import Collapsible from './Collapsible'
 import helpers from '../actions';
