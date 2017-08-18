@@ -20,7 +20,7 @@ class Editmodal extends Component {
     this.setState({ ...this.state, showModal: false });
     setTimeout(() => {
       this.props.callback()
-    }, 200);
+    }, 400);
   }
 
   open() {
