@@ -8,6 +8,10 @@ class Editmodal extends Component {
     this.state = { showModal: false, experience: this.props.job.experience, travel: this.props.job.travel, title: this.props.job.title, description: this.props.job.description, worktype: this.props.job.worktype, email: this.props.job.email, id: this.props.job.id }
   }
 
+  componentWillReceiveProps(nextProps) {
+    this.setState({ howModal: false, experience: nextProps.job.experience, travel: nextProps.job.travel, title: nextProps.job.title, description: nextProps.job.description, worktype: nextProps.job.worktype, email: nextProps.job.email, id: nextProps.job.id })
+  }
+
   close() {
     this.setState({ ...this.state, showModal: false });
   }
