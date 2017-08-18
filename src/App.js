@@ -27,7 +27,7 @@ class App extends Component {
         <Row>
           <div className="filler-mini"></div>
           <Col xs={4} sm={4} md={4} lg={4} xsOffset={4} smOffset={4} mdOffset={4} lgOffset={4}>
-              <p className="white">We're currently looking for jobs..</p>
+              <p className="white center">We're currently looking for jobs..</p>
           </Col>
         </Row>
       )

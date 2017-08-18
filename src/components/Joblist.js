@@ -21,7 +21,7 @@ class Joblist extends Component {
     if(this.props.results.length === 0) {
       return (
         <div>
-          <p className="white">We're currently looking for jobs..</p>
+          <p className="center white">We're currently looking for jobs..</p>
         </div>
       )
     } else {
