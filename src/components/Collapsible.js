@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import {Button, Well, Collapse} from 'react-bootstrap'
+import Editmodal from './Editmodal'
+import Deletebutton from './Deletebutton'
 
 class Collapsible extends Component {
   constructor(...args) {
@@ -37,9 +39,10 @@ class Collapsible extends Component {
   render() {
     return (
       <div>
-        <Button onClick={ ()=> this.setState({ open: !this.state.open })}>
+        <br />
+        <p className="white pointer" onClick={ ()=> this.setState({ open: !this.state.open })}>
           {this.props.info.title}
-        </Button>
+        </p>
         <Collapse className="tiny-padding-top" in={this.state.open}>
           <div>
             <Well>
@@ -56,6 +59,10 @@ class Collapsible extends Component {
 
               Contact:
               <p><a href={"mailto:" + this.props.info.email}>{this.props.info.email}</a></p>
+
+              <Editmodal callback={this.props.callback} job={this.props.info} />
+              <br />
+              <Deletebutton callback={this.props.callback} job={this.props.info} />
             </Well>
           </div>
         </Collapse>

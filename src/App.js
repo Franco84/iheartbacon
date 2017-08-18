@@ -19,7 +19,6 @@ class App extends Component {
 
   async componentWillMount() {
       let results = await helpers.getJobs()
-      debugger
       this.setState({ jobs: results.jobs });
   }
 
@@ -29,8 +28,8 @@ class App extends Component {
         <Row>
           <div className="filler-mini"></div>
           <Col xs={4} sm={4} md={4} lg={4} xsOffset={4} smOffset={4} mdOffset={4} lgOffset={4}>
-            <div className="center">
-              <Progress />
+            <div style={{position: 'relative'}}>
+              <p className="white">We're currently looking for jobs..</p>
             </div>
           </Col>
         </Row>
@@ -39,7 +38,7 @@ class App extends Component {
       return (
         <Row>
           <div className="filler-mini"></div>
-          <Col xs={4} sm={4} md={4} lg={4} xsOffset={4} smOffset={4} mdOffset={4} lgOffset={4}>
+          <Col xs={10} sm={10} md={6} lg={6} xsOffset={1} smOffset={1} mdOffset={3} lgOffset={3}>
             <Joblist results={this.state.jobs} refresh={this.refresh.bind(this)} />
           </Col>
         </Row>

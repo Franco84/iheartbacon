@@ -18,6 +18,7 @@ class Joblist extends Component {
     }
 
   switcher() {
+    var _this = this
     if(this.props.results.length === 0) {
       return (
         <div>
@@ -25,16 +26,16 @@ class Joblist extends Component {
         </div>
       )
     } else {
-      debugger
       return (
         <div className="center">
           <Jobmodal callback={this.props.refresh} />
+          <div className="filler-mini"></div>
           <p className="center white padded home-font"> Open Positions:</p>
           <div className="padding-bottom">
-          {this.props.results.map(function(item) {
+          {this.props.results.map(function(item,index) {
             return (
               <div>
-                <Collapsible className="white center" info={item} />
+                <Collapsible callback={_this.props.refresh} className="white center" info={item} />
                 <hr />
               </div>
             )
