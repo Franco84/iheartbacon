@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Modal, Button, Tooltip, OverlayTrigger, FormControl, FormGroup, Checkbox, Radio} from 'react-bootstrap';
+import {Button} from 'react-bootstrap';
 import axios from 'axios'
 
 class Deletebutton extends Component {

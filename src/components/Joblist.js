@@ -34,7 +34,7 @@ class Joblist extends Component {
           {this.props.results.map(function(item,index) {
             return (
               <div>
-                <Collapsible callback={_this.props.refresh} className="white center" info={item} />
+                <Collapsible key={index} callback={_this.props.refresh} className="white center" info={item} />
                 <hr />
               </div>
             )
