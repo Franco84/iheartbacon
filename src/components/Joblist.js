@@ -9,6 +9,7 @@ class Joblist extends Component {
     this.state = {jobs: props.results}
   }
     componentWillReceiveProps(nextProps) {
+      this.setState({jobs: nextProps.results})
     }
 
     async componentWillMount() {
