@@ -9,7 +9,7 @@ class Editmodal extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    this.setState({ howModal: false, experience: nextProps.job.experience, travel: nextProps.job.travel, title: nextProps.job.title, description: nextProps.job.description, worktype: nextProps.job.worktype, email: nextProps.job.email, id: nextProps.job.id })
+    this.setState({ showModal: false, experience: nextProps.job.experience, travel: nextProps.job.travel, title: nextProps.job.title, description: nextProps.job.description, worktype: nextProps.job.worktype, email: nextProps.job.email, id: nextProps.job.id })
   }
 
   close() {
