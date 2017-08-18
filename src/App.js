@@ -3,7 +3,6 @@ import { Grid, Row, Col } from 'react-bootstrap'
 import './App.css';
 import CloudyNights from './CloudyNights.mp4'
 import Joblist from './components/Joblist'
-import Progress from './components/Progress';
 import helpers from './actions';
 
 class App extends Component {
